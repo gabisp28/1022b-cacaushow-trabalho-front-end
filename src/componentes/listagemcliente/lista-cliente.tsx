@@ -14,6 +14,20 @@ export default function ListaCliente() {
         .then(resposta=>resposta.json())
         .then(dados=>setCliente(dados))
       },[])
+      function handleExcluir(id:number){
+        fetch(`https://one022b-cacaushow-trabalho-1r6f.onrender.com/cliente/${id}`,{
+          method:"DELETE"
+        })
+        .then(resposta=>{
+          if(resposta.status==200){
+            alert("Excluído com sucesso")
+            window.location.reload()
+          }
+          else{
+            alert("Erro ao excluir")
+          }
+        })
+      }
     return (
         <>
          <div className='container-link'>
@@ -25,6 +39,8 @@ export default function ListaCliente() {
                     <div key={clien.clienteId}className='cliente-item'>
                     <h1>{clien.nome}</h1>
                     <p>{clien.cpf}</p>
+                    <button onClick={()=>{handleExcluir(clien.clienteId)}}>Excluir</button>
+              <Link to={`/alterar-cliente/${clien.clienteId}`}>Alterar</Link>
                   </div>
                 )
             })}

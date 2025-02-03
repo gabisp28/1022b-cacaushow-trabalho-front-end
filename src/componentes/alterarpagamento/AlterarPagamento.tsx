@@ -60,7 +60,7 @@ function AlterarPagamento(){
             <form onSubmit={handleForm}>
                 <div>
                     <label htmlFor="idpagamento">ID Pagamento: </label>
-                    <input type="text" name="Idpagamento" value={idpagamento} readOnly />
+                    <input type="text" name="idpagamento" value={idpagamento} readOnly />
                 </div>
                 <div>
                     <label htmlFor="formapag">Forma de Pagamento: </label>

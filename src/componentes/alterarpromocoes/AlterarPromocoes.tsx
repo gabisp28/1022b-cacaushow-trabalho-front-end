@@ -4,7 +4,7 @@ import { FormEvent, useState, ChangeEvent, useEffect } from "react";
 function AlterarPromocoes(){
     const {idpromocao} = useParams()
     useEffect(()=>{
-        fetch(`https://one022b-cacaushow-trabalho.onrender.com/cliente/${idpromocao}`)
+        fetch(`https://one022b-cacaushow-trabalho-1r6f.onrender.com/promocao/${idpromocao}`)
         .then(resposta=>resposta.json())
         .then(dados=>{
             setTitulo(dados.titulo)
@@ -28,7 +28,7 @@ function AlterarPromocoes(){
            validade: validade,
            cupom: cupom
         }
-        fetch(`https://one022b-cacaushow-trabalho-1r6f.onrender.com/cliente/${idpromocao}`,{
+        fetch(`https://one022b-cacaushow-trabalho-1r6f.onrender.com/promocao/${idpromocao}`,{
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -67,11 +67,11 @@ function AlterarPromocoes(){
         <form onSubmit={handleForm}>
             <div>
                 <label htmlFor="itemid">Item ID: </label>
-                <input type="text" name="Itemid" value={idpromocao} readOnly/>
+                <input type="text" name="idpromocao" value={idpromocao} readOnly/>
             </div>
             <div>
                 <label htmlFor="nomeproduto">Nome da promoção: </label>
-                <input type="text" name="nomeproduto" value={titulo}  onChange={handleTitulo}/>
+                <input type="text" name="titulo" value={titulo}  onChange={handleTitulo}/>
             </div>
             <div>
                 <label htmlFor="descricao">Descrição: </label>

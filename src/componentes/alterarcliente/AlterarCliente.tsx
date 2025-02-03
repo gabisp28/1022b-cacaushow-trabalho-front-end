@@ -54,7 +54,7 @@ function AlterarCliente(){
         <main>
         <form onSubmit={handleForm}>
             <div>
-                <label htmlFor="clienteid">Cliente ID: </label>
+                <label htmlFor="clienteId">Cliente ID: </label>
                 <input type="text" name="clienteId" value={clienteId} readOnly/>
             </div>
             <div>

@@ -49,7 +49,7 @@ export default function CadastroCliente (){
         <h1>Cadastrar Cliente</h1>
         <form onSubmit={handleForm}>
             <div>
-                <label htmlFor="clienteid">Cliente ID: </label>
+                <label htmlFor="clienteId">Cliente ID: </label>
                 <input type="text" name="clienteId" onChange={handleClienteId}/>
             </div>
             <div>

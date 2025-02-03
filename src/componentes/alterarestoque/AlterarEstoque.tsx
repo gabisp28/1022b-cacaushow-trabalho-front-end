@@ -60,12 +60,12 @@ function AlterarEstoque(){
     <main>
         <form onSubmit={handleForm}>
             <div>
-                <label htmlFor="itemid">Item ID: </label>
-                <input type="text" name="Itemid" value={itemId} readOnly/>
+                <label htmlFor="itemId">Item ID: </label>
+                <input type="text" name="itemId" value={itemId} readOnly/>
             </div>
             <div>
                 <label htmlFor="nomeproduto">Nome do Produto: </label>
-                <input type="text" name="nomeproduto" value={nomeProduto} onChange={handleNomeProduto}/>
+                <input type="text" name="nomeProduto" value={nomeProduto} onChange={handleNomeProduto}/>
             </div>
             <div>
                 <label htmlFor="quantidade">Quantidade: </label>
